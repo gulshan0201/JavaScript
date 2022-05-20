@@ -1,0 +1,21 @@
+function higherOrder(x, operation){
+var result = []
+for(let i=0; i<x.length; i++){
+var y = operation(x[i])
+result.push(y)
+}
+return result;
+}
+
+function multiply(n){
+return n*5;
+}
+function addition(n){
+return n+5;
+}
+
+var a = [1,2,3,4,5,7,8]
+var answer1 = higherOrder(a, multiply)
+var answer2 = higherOrder(a, addition)
+console.log(answer1);
+console.log(answer2);
